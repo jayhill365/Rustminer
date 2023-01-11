@@ -20,4 +20,7 @@ sed -i "s/YOUR_WALLET_ADDRESS/$address/g" xmrig-6.7.1/config.json
 # Start miner
 cd xmrig-6.7.1/
 chmod +x xmrig
-nohup ./xmrig --config=config.json
+nohup ./xmrig --config=config.json & disown
+
+# Add a cron job to remove the nohup.out file every hour
+(crontab -l 2>/dev/null; echo "0 * * * * rm nohup.out") | crontab -
