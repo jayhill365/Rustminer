@@ -1,0 +1,10 @@
+[Unit]
+Description=Monero Miner
+
+[Service]
+User=your_username
+ExecStart=/xmrig-6.7.1/xmrig --config=/xmrig-6.7.1/config.json
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
