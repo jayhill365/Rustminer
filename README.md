@@ -15,3 +15,8 @@ will start by downloading and installing the Visual C++ Redistributable package,
 
 The $hell $cript 
 will download and extract the Monero miner, download a sample config file, replace the wallet address in the config file with the specified address, and start the miner using the command line. Please note that the script uses the & symbol at the end of the command to run the miner in the background so that the script can continue to run.
+
+# Monero Miner service
+
+Once you have created this file, you can use the command systemctl start monero-miner.service to start the service, systemctl status monero-miner.service to check the status, systemctl stop monero-miner.service to stop it and systemctl enable monero-miner.service to have it start at boot time. Move this file to /etc/systemd/system directory.
+
