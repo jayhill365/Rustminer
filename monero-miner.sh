@@ -10,11 +10,12 @@ tar -xvzf xmrig-6.7.1-linux-x64.tar.gz
 rm xmrig-6.7.1-linux-x64.tar.gz
 
 # Download config file
-wget $config_url -O xmrig/config.json
+wget $config_url -O xmrig-6.7.1/config.json
 
 # Set sending address
 address="YOUR_MONERO_WALLET_ADDRESS"
-sed -i "s/YOUR_WALLET_ADDRESS/$address/g" xmrig/config.json
+sed -i "s/YOUR_WALLET_ADDRESS/$address/g" xmrig-6.7.1/config.json
+
 
 # Start miner
 ./xmrig/xmrig --
