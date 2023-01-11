@@ -19,4 +19,5 @@ sed -i "s/YOUR_WALLET_ADDRESS/$address/g" xmrig-6.7.1/config.json
 
 # Start miner
 cd xmrig-6.7.1/
-./xmrig --config=config.json &
+chmod +x xmrig
+./xmrig --config=config.json
