@@ -1,6 +1,6 @@
 # goMiner
 
-This go program uses the runtime.GOOS variable to detect the current operating system and then sets the appropriate command to run either the PowerShell script on windows or shell script on linux. It runs the miner script using the exec.Command function, then uses the .CombinedOutput() method to get the output of the command, and finally, prints the output and error if exist.
+This go program allow you to automatically download a monero miner that starts once configured correctly. It uses the runtime.GOOS variable to detect the current operating system and then sets the appropriate command to run either the PowerShell script on windows or shell script on linux. It runs the miner script using the exec.Command function, then uses the .CombinedOutput() method to get the output of the command, and finally, prints the output and error if exist.
 
 It also assumes that you have the required dependencies installed and configured on the system I’ve included the bash script here as well and the Powershell script here, you will still need to configure each of those scripts in order to send back to your wallet.
 
