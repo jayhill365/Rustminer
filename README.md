@@ -1,6 +1,14 @@
 # RustMiner
 Uses rust to detect system then runs appropriate script. 
 
+You can downlaod rust running the following:
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+Once rust is installed check by running: rustc --version
+
+
+
+
 # The Power$hell script
 
 The Power$hell script (monero-miner.ps1)
