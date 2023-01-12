@@ -1,5 +1,5 @@
-# goMiner
-go functions still a work in progress 
+# RustMiner
+Uses rust to detect system then runs appropriate script. 
 
 # The Power$hell script
 
