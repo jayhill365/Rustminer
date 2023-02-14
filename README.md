@@ -1,6 +1,7 @@
 # RustMiner
 
-<img width="665" alt="Screen Shot 2023-02-13 at 8 20 00 PM" src="https://user-images.githubusercontent.com/19259608/218638462-ad5ea85a-dc49-4b6a-90a2-a173d36980ac.png">
+<img width="656" alt="Screen Shot 2023-02-13 at 8 26 25 PM" src="https://user-images.githubusercontent.com/19259608/218639285-bc4e7f9e-1efa-491e-9b4a-a6474bd24f63.png">
+
 
 Uses rust to detect system then runs appropriate script. 
 You can downlaod rust running the following:
