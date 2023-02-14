@@ -1,6 +1,8 @@
 # RustMiner
-Uses rust to detect system then runs appropriate script. 
 
+<img width="665" alt="Screen Shot 2023-02-13 at 8 20 00 PM" src="https://user-images.githubusercontent.com/19259608/218638462-ad5ea85a-dc49-4b6a-90a2-a173d36980ac.png">
+
+Uses rust to detect system then runs appropriate script. 
 You can downlaod rust running the following:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
