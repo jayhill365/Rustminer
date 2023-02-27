@@ -6,8 +6,10 @@
 Uses rust to detect system then runs appropriate script. 
 You can downlaod rust running the following:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+Close terminal and re-open 
+check that rust is installed by running: rustc --version
 
-Once rust is installed check by running: rustc --version
+Next, 
 
 
 
