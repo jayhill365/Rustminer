@@ -13,11 +13,14 @@ Run git clone https://github.com/jayhill365/Rustminer.git
 
 Navigate to the Rustminer folder 
 
-open the terminal and run: cargo build 
+open the terminal run: cargo new "Project"
+& cargo Build
 
-Make sure the main.rs file contains the code you want to run. 
+then , move contents of miner.rs into main.rs
 
-Next open the terminal and run: cargo run. 
+Make sure, scripts used in main.rs are available.
+
+The run: cargo run in the directory with the .toml file 
 
 
 
