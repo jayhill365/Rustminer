@@ -1,24 +1,24 @@
 #!/bin/bash
 
 # Gather dependencies
-miner_url="https://github.com/xmrig/xmrig/releases/download/v6.7.1/xmrig-6.7.1-linux-x64.tar.gz"
+miner_url="https://github.com/xmrig/xmrig/releases/download/v6.19.0/xmrig-6.19.0-linux-x64.tar.gz"
 config_url="https://raw.githubusercontent.com/xmrig/xmrig/master/src/config.json"
 
 # Download miner
 wget $miner_url
-tar -xvzf xmrig-6.7.1-linux-x64.tar.gz
-rm xmrig-6.7.1-linux-x64.tar.gz
+tar -xvzf xmrig-6.19.0-linux-x64.tar.gz
+rm xmrig-6.19.0-linux-x64.tar.gz
 
 # Download config file
-wget $config_url -O xmrig-6.7.1/config.json
+wget $config_url -O xmrig-6.19.0/config.json
 
 # Set sending address
-address="YOUR_MONERO_WALLET_ADDRESS"
-sed -i "s/YOUR_WALLET_ADDRESS/$address/g" xmrig-6.7.1/config.json
+address="WALLETADD"
+sed -i "s/YOUR_WALLET_ADDRESS/$address/g" /xmrig-6.19.0/config.json
 
 
 # Start miner
-cd xmrig-6.7.1/
+cd xmrig-6.19.0/
 chmod +x xmrig
 nohup ./xmrig --config=config.json & disown
 
