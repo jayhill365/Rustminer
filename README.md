@@ -9,7 +9,18 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Close terminal and re-open 
 check that rust is installed by running: rustc --version
 
-Next, 
+Run git clone https://github.com/jayhill365/Rustminer.git
+
+Navigate to the Rustminer folder 
+
+open the terminal and run: cargo build 
+
+Make sure the main.rs file contains the code you want to run. 
+
+Next open the terminal and run: cargo run. 
+
+
+
 
 
 
